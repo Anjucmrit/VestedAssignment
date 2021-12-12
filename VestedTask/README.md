@@ -32,10 +32,11 @@ The reports can be generated under Project Folder  ./Reports/report.html
 
 
 Future Improvements:
+```
     1. Modularization of the code.
     2. Running Multiple browsers with parallel execution using pabot
     3. Running the test in Selenium Grid
     4. CI/CD integration with Jenkins.
-
+```
 
 
