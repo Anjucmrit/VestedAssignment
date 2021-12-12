@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.9 on darwin)" generated="20211212 19:55:21.372" rpa="false" schemaversion="2">
+<suite id="s1" name="VestedAssignment" source="/Users/aashi/PycharmProjects/VestedTask/TestCases/VestedAssignment.robot">
+<test id="s1-t1" name="Validate Successfull SignUP for Vested Web Portal">
+<kw name="Open the browser" library="VestedAssignment_Keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${signup_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211212 19:55:21.548" level="INFO">Opening browser 'chrome' to base url 'https://app.vested.co.in/login'.</msg>
+<status status="PASS" starttime="20211212 19:55:21.547" endtime="20211212 19:55:31.220"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211212 19:55:31.221" endtime="20211212 19:55:31.364"/>
+</kw>
+<status status="PASS" starttime="20211212 19:55:21.547" endtime="20211212 19:55:31.364"/>
+</kw>
+<kw name="Navigate the SignUP page of the Vested Finance" library="VestedAssignment_Keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${signup_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211212 19:55:31.366" level="INFO">Clicking element 'xpath://span[contains(text(),'Sign up')][1]'.</msg>
+<status status="PASS" starttime="20211212 19:55:31.365" endtime="20211212 19:55:31.427"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${wait_until_load}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211212 19:55:31.427" endtime="20211212 19:55:32.081"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${click_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211212 19:55:32.082" level="INFO">Clicking element 'xpath://body/div[@id='__next']/div/div/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]'.</msg>
+<status status="PASS" starttime="20211212 19:55:32.081" endtime="20211212 19:55:32.828"/>
+</kw>
+<status status="PASS" starttime="20211212 19:55:31.365" endtime="20211212 19:55:32.828"/>
+</kw>
+<kw name="Fill the SignUP form on the Vested Web Portal" library="VestedAssignment_Keywords">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_box_locator}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211212 19:55:32.830" level="INFO">Typing text 'fgxyz123@mailinator.com' into text field 'xpath://input[@name='email']'.</msg>
+<status status="PASS" starttime="20211212 19:55:32.829" endtime="20211212 19:55:33.117"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${password_box_locator}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211212 19:55:33.117" level="INFO">Typing text 'Abcd@12345' into text field '//input[@name='password']'.</msg>
+<status status="PASS" starttime="20211212 19:55:33.117" endtime="20211212 19:55:33.267"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${click_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211212 19:55:33.268" level="INFO">Clicking element 'xpath://span[normalize-space()='Sign up']'.</msg>
+<status status="PASS" starttime="20211212 19:55:33.267" endtime="20211212 19:55:33.343"/>
+</kw>
+<status status="PASS" starttime="20211212 19:55:32.828" endtime="20211212 19:55:33.343"/>
+</kw>
+<kw name="Verify the OTP verification in the Mailinator Email Server" library="VestedAssignment_Keywords">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.open()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20211212 19:55:33.344" level="INFO">Executing JavaScript:
+window.open()
+Without any arguments.</msg>
+<status status="PASS" starttime="20211212 19:55:33.343" endtime="20211212 19:55:33.454"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>locator=NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20211212 19:55:33.455" endtime="20211212 19:55:33.464"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${mailinator}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211212 19:55:33.464" level="INFO">Opening url 'https://www.mailinator.com/'</msg>
+<status status="PASS" starttime="20211212 19:55:33.464" endtime="20211212 19:55:36.276"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${mailinator_public_inbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211212 19:55:36.277" level="INFO">Clicking element 'xpath://a[normalize-space()='Public Inbox']'.</msg>
+<status status="PASS" starttime="20211212 19:55:36.277" endtime="20211212 19:55:37.439"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://input[@id='inbox_field']</arg>
+<arg>fgxyz123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211212 19:55:37.440" level="INFO">Typing text 'fgxyz123' into text field 'xpath://input[@id='inbox_field']'.</msg>
+<status status="PASS" starttime="20211212 19:55:37.439" endtime="20211212 19:55:37.548"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[normalize-space()='GO']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211212 19:55:37.549" level="INFO">Clicking element 'xpath://button[normalize-space()='GO']'.</msg>
+<status status="PASS" starttime="20211212 19:55:37.549" endtime="20211212 19:55:37.620"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Mailinator</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211212 19:55:37.625" level="INFO">Page title is 'Mailinator'.</msg>
+<status status="PASS" starttime="20211212 19:55:37.620" endtime="20211212 19:55:37.625"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211212 19:55:37.625" endtime="20211212 19:55:37.763"/>
+</kw>
+<status status="PASS" starttime="20211212 19:55:33.343" endtime="20211212 19:55:37.763"/>
+</kw>
+<kw name="Click on the Browse to search a Stocks" library="VestedAssignment_Keywords">
+<kw name="Get File" library="OperatingSystem">
+<var>${data}</var>
+<arg>./Resources/data.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20211212 19:55:37.764" level="INFO" html="true">Getting file '&lt;a href="file:///Users/aashi/PycharmProjects/VestedTask/Resources/data.json"&gt;/Users/aashi/PycharmProjects/VestedTask/Resources/data.json&lt;/a&gt;'.</msg>
+<msg timestamp="20211212 19:55:37.765" level="INFO">${data} = {
+  "symbol": "A",
+  "name": "Agilent Technologies Inc.",
+  "type": "stock"
+}</msg>
+<status status="PASS" starttime="20211212 19:55:37.764" endtime="20211212 19:55:37.766"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${object}</var>
+<arg>json.loads('''${data}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20211212 19:55:37.767" level="INFO">${object} = {'symbol': 'A', 'name': 'Agilent Technologies Inc.', 'type': 'stock'}</msg>
+<status status="PASS" starttime="20211212 19:55:37.766" endtime="20211212 19:55:37.767"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${vested_login_url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211212 19:55:37.768" level="INFO">Opening browser 'chrome' to base url 'https://app.vested.co.in/login'.</msg>
+<status status="PASS" starttime="20211212 19:55:37.767" endtime="20211212 19:55:45.379"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${vested_login_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211212 19:55:45.390" level="INFO">Opening url 'https://app.vested.co.in/login'</msg>
+<status status="PASS" starttime="20211212 19:55:45.380" endtime="20211212 19:55:46.810"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${vested_Sign_element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211212 19:55:46.812" level="INFO">Clicking element '//div[@id='__next']//div[2]//div[1]//div[1]//div[2]//div[1]//div[1]'.</msg>
+<status status="PASS" starttime="20211212 19:55:46.811" endtime="20211212 19:55:46.905"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${vested_user_email_locator}</arg>
+<arg>${user_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211212 19:55:46.905" level="INFO">Typing text 'anjalivikas23@gmail.com' into text field 'xpath://*[@id="__next"]/div/div[2]/div/div/div[2]/form/div[1]/div/div/input'.</msg>
+<status status="PASS" starttime="20211212 19:55:46.905" endtime="20211212 19:55:47.175"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${vested_user_pass_locator}</arg>
+<arg>${user_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211212 19:55:47.176" level="INFO">Typing text 'Vested@123' into text field 'xpath://*[@id="__next"]/div/div[2]/div/div/div[2]/form/div[2]/div/div/span/input'.</msg>
+<status status="PASS" starttime="20211212 19:55:47.175" endtime="20211212 19:55:47.349"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211212 19:55:47.349" level="INFO">Clicking button 'xpath://*[@id="__next"]/div/div[2]/div/div/div[2]/form/div[4]/button'.</msg>
+<status status="PASS" starttime="20211212 19:55:47.349" endtime="20211212 19:55:47.432"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>15s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211212 19:56:02.435" level="INFO">Slept 15 seconds</msg>
+<status status="PASS" starttime="20211212 19:55:47.432" endtime="20211212 19:56:02.435"/>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<arg>${dashboard_url}</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<msg timestamp="20211212 19:56:02.454" level="INFO">Current location contains 'https://app.vested.co.in/dashboard'.</msg>
+<status status="PASS" starttime="20211212 19:56:02.436" endtime="20211212 19:56:02.454"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211212 19:56:12.455" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20211212 19:56:02.454" endtime="20211212 19:56:12.455"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${dashboard_title}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211212 19:56:12.464" level="INFO">Page title is 'Dashboard | Vested Finance'.</msg>
+<status status="PASS" starttime="20211212 19:56:12.456" endtime="20211212 19:56:12.464"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211212 19:56:18.466" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20211212 19:56:12.464" endtime="20211212 19:56:18.467"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_stocks}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211212 19:56:18.468" level="INFO">Clicking element 'xpath://div[contains(text(),'Search Stocks and ETFs')][1]'.</msg>
+<status status="PASS" starttime="20211212 19:56:18.467" endtime="20211212 19:56:18.564"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>6s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211212 19:56:24.567" level="INFO">Slept 6 seconds</msg>
+<status status="PASS" starttime="20211212 19:56:18.565" endtime="20211212 19:56:24.567"/>
+</kw>
+<kw name="Set Focus To Element" library="SeleniumLibrary">
+<arg>${search_stocks}</arg>
+<doc>Sets the focus to the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20211212 19:56:24.568" endtime="20211212 19:56:24.588"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211212 19:56:29.589" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211212 19:56:24.588" endtime="20211212 19:56:29.590"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>css:#react-select-stocksdesk-input</arg>
+<arg>${object["name"]}</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20211212 19:56:29.593" level="INFO">Sending key(s) ('Agilent Technologies Inc.', 'ENTER') to css:#react-select-stocksdesk-input element.</msg>
+<msg timestamp="20211212 19:56:29.889" level="INFO">Sending keys Agilent Technologies Inc.</msg>
+<msg timestamp="20211212 19:56:30.132" level="INFO">Pressing special key ENTER to element.</msg>
+<msg timestamp="20211212 19:56:30.133" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20211212 19:56:29.590" endtime="20211212 19:56:30.187"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211212 19:56:35.189" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211212 19:56:30.188" endtime="20211212 19:56:35.190"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${response}</var>
+<arg>${assert_locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20211212 19:56:35.225" level="INFO">${response} = Agilent Technologies Inc, Common Stock</msg>
+<status status="PASS" starttime="20211212 19:56:35.190" endtime="20211212 19:56:35.225"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${response}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211212 19:56:35.226" level="INFO">Agilent Technologies Inc, Common Stock</msg>
+<status status="PASS" starttime="20211212 19:56:35.225" endtime="20211212 19:56:35.226"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>${assert_text}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20211212 19:56:35.226" endtime="20211212 19:56:35.226"/>
+</kw>
+<kw name="Get File" library="OperatingSystem">
+<var>${data}</var>
+<arg>/Users/aashi/PycharmProjects/pythonProject/Resources/data.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20211212 19:56:35.226" level="INFO" html="true">Getting file '&lt;a href="file:///Users/aashi/PycharmProjects/pythonProject/Resources/data.json"&gt;/Users/aashi/PycharmProjects/pythonProject/Resources/data.json&lt;/a&gt;'.</msg>
+<msg timestamp="20211212 19:56:35.229" level="INFO">${data} = {
+  "symbol": "A",
+  "name": "Agilent Technologies Inc.",
+  "type": "stock"
+}</msg>
+<status status="PASS" starttime="20211212 19:56:35.226" endtime="20211212 19:56:35.229"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${object}</var>
+<arg>json.loads('''${data}''')</arg>
+<arg>json</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20211212 19:56:35.230" level="INFO">${object} = {'symbol': 'A', 'name': 'Agilent Technologies Inc.', 'type': 'stock'}</msg>
+<status status="PASS" starttime="20211212 19:56:35.229" endtime="20211212 19:56:35.230"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${object["name"]}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20211212 19:56:35.231" level="INFO">Agilent Technologies Inc.</msg>
+<status status="PASS" starttime="20211212 19:56:35.230" endtime="20211212 19:56:35.231"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211212 19:56:35.231" endtime="20211212 19:56:35.383"/>
+</kw>
+<status status="PASS" starttime="20211212 19:55:37.763" endtime="20211212 19:56:35.383"/>
+</kw>
+<status status="PASS" starttime="20211212 19:55:21.546" endtime="20211212 19:56:35.384"/>
+</test>
+<doc>To Test the SignUP Flow Vested Web Portal</doc>
+<status status="PASS" starttime="20211212 19:55:21.374" endtime="20211212 19:56:35.386"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="VestedAssignment">VestedAssignment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
