@@ -16,6 +16,8 @@ Prerequisite:
 ```
     1. Install Robot Framework
     2. Install Python3, pyCharm, Pip3, SeleniumLibrary
+    3. sudo pip3 install robotframework
+    4. pip3 install --upgrade robotframework-seleniumlibrary
 ```
 
 
